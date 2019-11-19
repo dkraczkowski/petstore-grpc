@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "petstore"
+version = "1.0.0"
+description = "Pet store grpc application"
+authors = ["Krac"]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+protobuf = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.3"
+black = "==19.3b0"
+
+[build-system]
+requires = ["poetry>=0.12"]
