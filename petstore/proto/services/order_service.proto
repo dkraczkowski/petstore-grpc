@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "petstore/proto/petstore.proto";
+
+package petstore.services;
+
+message GetOrderRequest {
+  uint32 order_id = 1;
+}
+
+message UpdateOrderRequest {
+  uint64 order_id = 1;
+  Order.OrderStatus status = 2;
+}
+
+service OrderService {
+  rpc GetOrder(GetOrderRequest) returns(Order);
+  rpc CreateOrder(Order) returns(Order);
+  rpc UpdateOrder(UpdateOrderRequest) returns(Order);
+}

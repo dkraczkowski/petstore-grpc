@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "petstore/proto/petstore.proto";
+
+package petstore.services;
+
+message GetCustomerRequest {
+  uint32 customer_id = 1;
+}
+
+service CustomerService {
+  rpc GetCustomer(GetCustomerRequest) returns(Customer);
+  rpc CreateCustomer(Customer) returns(Customer);
+  rpc UpdateCustomer(Customer) returns(Customer);
+}

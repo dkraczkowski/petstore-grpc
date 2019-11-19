@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+import "petstore/proto/petstore.proto";
+
+package petstore.services;
+
+message GetPetRequest {
+    uint32 pet_id = 1;
+}
+
+message CreatePetRequest {
+    Pet pet = 1;
+}
+
+message PetList {
+    uint32 total_items = 1;
+    repeated Pet pets = 2;
+}
+
+message ListPetRequest {
+  uint32 items_per_page = 1;
+  uint32 page = 2;
+}
+
+service PetService {
+  rpc GetPet(GetPetRequest) returns(Pet);
+  rpc ListPets(ListPetRequest) returns (PetList);
+
+  rpc CreatePet(Pet) returns(Pet);
+  rpc DeletePet(Pet) returns(Pet);
+}

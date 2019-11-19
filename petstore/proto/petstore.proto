@@ -1,9 +1,60 @@
 syntax = "proto3";
+// python -m grpc.tools.protoc -I. --proto_path=. --python_out=. --python_grpc_out=. --mypy_out=. petstore/proto/petstore.proto petstore/proto/services/*.proto
 
 package petstore;
 
+import "google/protobuf/timestamp.proto";
+
+
 message Photo {
-    int32 id = 1;
+    uint32 id = 1;
     string name = 2;
     string url = 3;
+}
+
+message Category {
+    uint32 id = 1;
+    string name = 2;
+}
+
+message Pet {
+    enum PetStatus {
+        AVAILABLE = 0;
+        PENDING = 1;
+        BOOKED = 2;
+        SOLD = 3;
+    }
+
+    uint32 id = 1;
+    string name = 2;
+    Category category = 3;
+    repeated Photo photos = 4;
+    PetStatus status = 5;
+}
+
+message Customer {
+    enum AccountStatus {
+        ACTIVE = 0;
+        INACTIVE = 1;
+    }
+
+    uint32 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string email = 4;
+    AccountStatus status = 5;
+}
+
+message Order {
+    enum OrderStatus {
+        PLACED = 0;
+        APPROVED = 1;
+        DELIVERED = 2;
+    }
+
+    uint32 id = 1;
+    Customer customer = 2;
+    Pet pet = 3;
+    google.protobuf.Timestamp ship_date = 4;
+    OrderStatus status = 5;
 }
