@@ -190,8 +190,8 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "6eed609cfb68b0865821922ffd0e534072a0d0768e804dccf228a37348445cf3"
-python-versions = "^3.7"
+content-hash = "11e4c7395175da344025404dfff2e768b4bfe81da9ad10befdb3de2f77e0ada7"
+python-versions = "^3.6"
 
 [metadata.hashes]
 appdirs = ["9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92", "d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e"]
