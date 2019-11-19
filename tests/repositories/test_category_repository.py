@@ -1,5 +1,5 @@
-from petstore.repositories import CategoryRepository
 from petstore.proto.petstore_pb2 import Category
+from petstore.repositories import CategoryRepository
 
 
 def test_can_create_category(db_mock):

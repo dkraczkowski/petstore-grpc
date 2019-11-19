@@ -4,61 +4,62 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
-from petstore.proto.petstore_pb2 import (
-    Order as petstore___proto___petstore_pb2___Order,
-)
+from petstore.proto.petstore_pb2 import Order as petstore___proto___petstore_pb2___Order
 
-from typing import (
-    Optional as typing___Optional,
-)
+from typing import Optional as typing___Optional
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
 builtin___float = float
 builtin___int = int
 
-
 class GetOrderRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    order_id = ... # type: builtin___int
-
-    def __init__(self,
-        *,
-        order_id : typing___Optional[builtin___int] = None,
-        ) -> None: ...
+    order_id = ...  # type: builtin___int
+    def __init__(
+        self, *, order_id: typing___Optional[builtin___int] = None
+    ) -> None: ...
     @classmethod
     def FromString(cls, s: builtin___bytes) -> GetOrderRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
-        def ClearField(self, field_name: typing_extensions___Literal[u"order_id"]) -> None: ...
+        def ClearField(
+            self, field_name: typing_extensions___Literal["order_id"]
+        ) -> None: ...
     else:
-        def ClearField(self, field_name: typing_extensions___Literal[u"order_id",b"order_id"]) -> None: ...
+        def ClearField(
+            self, field_name: typing_extensions___Literal["order_id", b"order_id"]
+        ) -> None: ...
 
 class UpdateOrderRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    order_id = ... # type: builtin___int
-    status = ... # type: petstore___proto___petstore_pb2___Order.OrderStatus
-
-    def __init__(self,
+    order_id = ...  # type: builtin___int
+    status = ...  # type: petstore___proto___petstore_pb2___Order.OrderStatus
+    def __init__(
+        self,
         *,
-        order_id : typing___Optional[builtin___int] = None,
-        status : typing___Optional[petstore___proto___petstore_pb2___Order.OrderStatus] = None,
-        ) -> None: ...
+        order_id: typing___Optional[builtin___int] = None,
+        status: typing___Optional[
+            petstore___proto___petstore_pb2___Order.OrderStatus
+        ] = None,
+    ) -> None: ...
     @classmethod
     def FromString(cls, s: builtin___bytes) -> UpdateOrderRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
-        def ClearField(self, field_name: typing_extensions___Literal[u"order_id",u"status"]) -> None: ...
+        def ClearField(
+            self, field_name: typing_extensions___Literal["order_id", "status"]
+        ) -> None: ...
     else:
-        def ClearField(self, field_name: typing_extensions___Literal[u"order_id",b"order_id",u"status",b"status"]) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "order_id", b"order_id", "status", b"status"
+            ],
+        ) -> None: ...

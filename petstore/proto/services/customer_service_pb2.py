@@ -3,11 +3,13 @@
 # source: petstore/proto/services/customer_service.proto
 
 import sys
-_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+
+_b = sys.version_info[0] < 3 and (lambda x: x) or (lambda x: x.encode("latin1"))
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
+
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -17,98 +19,110 @@ from petstore.proto import petstore_pb2 as petstore_dot_proto_dot_petstore__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
-  name='petstore/proto/services/customer_service.proto',
-  package='petstore.services',
-  syntax='proto3',
-  serialized_options=None,
-  serialized_pb=_b('\n.petstore/proto/services/customer_service.proto\x12\x11petstore.services\x1a\x1dpetstore/proto/petstore.proto\")\n\x12GetCustomerRequest\x12\x13\n\x0b\x63ustomer_id\x18\x01 \x01(\r2\xcf\x01\n\x0f\x43ustomerService\x12H\n\x0bGetCustomer\x12%.petstore.services.GetCustomerRequest\x1a\x12.petstore.Customer\x12\x38\n\x0e\x43reateCustomer\x12\x12.petstore.Customer\x1a\x12.petstore.Customer\x12\x38\n\x0eUpdateCustomer\x12\x12.petstore.Customer\x1a\x12.petstore.Customerb\x06proto3')
-  ,
-  dependencies=[petstore_dot_proto_dot_petstore__pb2.DESCRIPTOR,])
-
-
+    name="petstore/proto/services/customer_service.proto",
+    package="petstore.services",
+    syntax="proto3",
+    serialized_options=None,
+    serialized_pb=_b(
+        '\n.petstore/proto/services/customer_service.proto\x12\x11petstore.services\x1a\x1dpetstore/proto/petstore.proto")\n\x12GetCustomerRequest\x12\x13\n\x0b\x63ustomer_id\x18\x01 \x01(\r2\xcf\x01\n\x0f\x43ustomerService\x12H\n\x0bGetCustomer\x12%.petstore.services.GetCustomerRequest\x1a\x12.petstore.Customer\x12\x38\n\x0e\x43reateCustomer\x12\x12.petstore.Customer\x1a\x12.petstore.Customer\x12\x38\n\x0eUpdateCustomer\x12\x12.petstore.Customer\x1a\x12.petstore.Customerb\x06proto3'
+    ),
+    dependencies=[petstore_dot_proto_dot_petstore__pb2.DESCRIPTOR],
+)
 
 
 _GETCUSTOMERREQUEST = _descriptor.Descriptor(
-  name='GetCustomerRequest',
-  full_name='petstore.services.GetCustomerRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='customer_id', full_name='petstore.services.GetCustomerRequest.customer_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=100,
-  serialized_end=141,
+    name="GetCustomerRequest",
+    full_name="petstore.services.GetCustomerRequest",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="customer_id",
+            full_name="petstore.services.GetCustomerRequest.customer_id",
+            index=0,
+            number=1,
+            type=13,
+            cpp_type=3,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+        )
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=100,
+    serialized_end=141,
 )
 
-DESCRIPTOR.message_types_by_name['GetCustomerRequest'] = _GETCUSTOMERREQUEST
+DESCRIPTOR.message_types_by_name["GetCustomerRequest"] = _GETCUSTOMERREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-GetCustomerRequest = _reflection.GeneratedProtocolMessageType('GetCustomerRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETCUSTOMERREQUEST,
-  '__module__' : 'petstore.proto.services.customer_service_pb2'
-  # @@protoc_insertion_point(class_scope:petstore.services.GetCustomerRequest)
-  })
+GetCustomerRequest = _reflection.GeneratedProtocolMessageType(
+    "GetCustomerRequest",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _GETCUSTOMERREQUEST,
+        "__module__": "petstore.proto.services.customer_service_pb2"
+        # @@protoc_insertion_point(class_scope:petstore.services.GetCustomerRequest)
+    },
+)
 _sym_db.RegisterMessage(GetCustomerRequest)
 
 
-
 _CUSTOMERSERVICE = _descriptor.ServiceDescriptor(
-  name='CustomerService',
-  full_name='petstore.services.CustomerService',
-  file=DESCRIPTOR,
-  index=0,
-  serialized_options=None,
-  serialized_start=144,
-  serialized_end=351,
-  methods=[
-  _descriptor.MethodDescriptor(
-    name='GetCustomer',
-    full_name='petstore.services.CustomerService.GetCustomer',
+    name="CustomerService",
+    full_name="petstore.services.CustomerService",
+    file=DESCRIPTOR,
     index=0,
-    containing_service=None,
-    input_type=_GETCUSTOMERREQUEST,
-    output_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
     serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='CreateCustomer',
-    full_name='petstore.services.CustomerService.CreateCustomer',
-    index=1,
-    containing_service=None,
-    input_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
-    output_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='UpdateCustomer',
-    full_name='petstore.services.CustomerService.UpdateCustomer',
-    index=2,
-    containing_service=None,
-    input_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
-    output_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
-    serialized_options=None,
-  ),
-])
+    serialized_start=144,
+    serialized_end=351,
+    methods=[
+        _descriptor.MethodDescriptor(
+            name="GetCustomer",
+            full_name="petstore.services.CustomerService.GetCustomer",
+            index=0,
+            containing_service=None,
+            input_type=_GETCUSTOMERREQUEST,
+            output_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
+            serialized_options=None,
+        ),
+        _descriptor.MethodDescriptor(
+            name="CreateCustomer",
+            full_name="petstore.services.CustomerService.CreateCustomer",
+            index=1,
+            containing_service=None,
+            input_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
+            output_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
+            serialized_options=None,
+        ),
+        _descriptor.MethodDescriptor(
+            name="UpdateCustomer",
+            full_name="petstore.services.CustomerService.UpdateCustomer",
+            index=2,
+            containing_service=None,
+            input_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
+            output_type=petstore_dot_proto_dot_petstore__pb2._CUSTOMER,
+            serialized_options=None,
+        ),
+    ],
+)
 _sym_db.RegisterServiceDescriptor(_CUSTOMERSERVICE)
 
-DESCRIPTOR.services_by_name['CustomerService'] = _CUSTOMERSERVICE
+DESCRIPTOR.services_by_name["CustomerService"] = _CUSTOMERSERVICE
 
 # @@protoc_insertion_point(module_scope)

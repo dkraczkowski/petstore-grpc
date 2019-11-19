@@ -3,11 +3,13 @@
 # source: petstore/proto/services/order_service.proto
 
 import sys
-_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+
+_b = sys.version_info[0] < 3 and (lambda x: x) or (lambda x: x.encode("latin1"))
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
+
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -17,145 +19,182 @@ from petstore.proto import petstore_pb2 as petstore_dot_proto_dot_petstore__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
-  name='petstore/proto/services/order_service.proto',
-  package='petstore.services',
-  syntax='proto3',
-  serialized_options=None,
-  serialized_pb=_b('\n+petstore/proto/services/order_service.proto\x12\x11petstore.services\x1a\x1dpetstore/proto/petstore.proto\"#\n\x0fGetOrderRequest\x12\x10\n\x08order_id\x18\x01 \x01(\r\"S\n\x12UpdateOrderRequest\x12\x10\n\x08order_id\x18\x01 \x01(\x04\x12+\n\x06status\x18\x02 \x01(\x0e\x32\x1b.petstore.Order.OrderStatus2\xc7\x01\n\x0cOrderService\x12?\n\x08GetOrder\x12\".petstore.services.GetOrderRequest\x1a\x0f.petstore.Order\x12/\n\x0b\x43reateOrder\x12\x0f.petstore.Order\x1a\x0f.petstore.Order\x12\x45\n\x0bUpdateOrder\x12%.petstore.services.UpdateOrderRequest\x1a\x0f.petstore.Orderb\x06proto3')
-  ,
-  dependencies=[petstore_dot_proto_dot_petstore__pb2.DESCRIPTOR,])
-
-
+    name="petstore/proto/services/order_service.proto",
+    package="petstore.services",
+    syntax="proto3",
+    serialized_options=None,
+    serialized_pb=_b(
+        '\n+petstore/proto/services/order_service.proto\x12\x11petstore.services\x1a\x1dpetstore/proto/petstore.proto"#\n\x0fGetOrderRequest\x12\x10\n\x08order_id\x18\x01 \x01(\r"S\n\x12UpdateOrderRequest\x12\x10\n\x08order_id\x18\x01 \x01(\x04\x12+\n\x06status\x18\x02 \x01(\x0e\x32\x1b.petstore.Order.OrderStatus2\xc7\x01\n\x0cOrderService\x12?\n\x08GetOrder\x12".petstore.services.GetOrderRequest\x1a\x0f.petstore.Order\x12/\n\x0b\x43reateOrder\x12\x0f.petstore.Order\x1a\x0f.petstore.Order\x12\x45\n\x0bUpdateOrder\x12%.petstore.services.UpdateOrderRequest\x1a\x0f.petstore.Orderb\x06proto3'
+    ),
+    dependencies=[petstore_dot_proto_dot_petstore__pb2.DESCRIPTOR],
+)
 
 
 _GETORDERREQUEST = _descriptor.Descriptor(
-  name='GetOrderRequest',
-  full_name='petstore.services.GetOrderRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='order_id', full_name='petstore.services.GetOrderRequest.order_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=97,
-  serialized_end=132,
+    name="GetOrderRequest",
+    full_name="petstore.services.GetOrderRequest",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="order_id",
+            full_name="petstore.services.GetOrderRequest.order_id",
+            index=0,
+            number=1,
+            type=13,
+            cpp_type=3,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+        )
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=97,
+    serialized_end=132,
 )
 
 
 _UPDATEORDERREQUEST = _descriptor.Descriptor(
-  name='UpdateOrderRequest',
-  full_name='petstore.services.UpdateOrderRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='order_id', full_name='petstore.services.UpdateOrderRequest.order_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='petstore.services.UpdateOrderRequest.status', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=134,
-  serialized_end=217,
+    name="UpdateOrderRequest",
+    full_name="petstore.services.UpdateOrderRequest",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="order_id",
+            full_name="petstore.services.UpdateOrderRequest.order_id",
+            index=0,
+            number=1,
+            type=4,
+            cpp_type=4,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+        ),
+        _descriptor.FieldDescriptor(
+            name="status",
+            full_name="petstore.services.UpdateOrderRequest.status",
+            index=1,
+            number=2,
+            type=14,
+            cpp_type=8,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=134,
+    serialized_end=217,
 )
 
-_UPDATEORDERREQUEST.fields_by_name['status'].enum_type = petstore_dot_proto_dot_petstore__pb2._ORDER_ORDERSTATUS
-DESCRIPTOR.message_types_by_name['GetOrderRequest'] = _GETORDERREQUEST
-DESCRIPTOR.message_types_by_name['UpdateOrderRequest'] = _UPDATEORDERREQUEST
+_UPDATEORDERREQUEST.fields_by_name[
+    "status"
+].enum_type = petstore_dot_proto_dot_petstore__pb2._ORDER_ORDERSTATUS
+DESCRIPTOR.message_types_by_name["GetOrderRequest"] = _GETORDERREQUEST
+DESCRIPTOR.message_types_by_name["UpdateOrderRequest"] = _UPDATEORDERREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-GetOrderRequest = _reflection.GeneratedProtocolMessageType('GetOrderRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETORDERREQUEST,
-  '__module__' : 'petstore.proto.services.order_service_pb2'
-  # @@protoc_insertion_point(class_scope:petstore.services.GetOrderRequest)
-  })
+GetOrderRequest = _reflection.GeneratedProtocolMessageType(
+    "GetOrderRequest",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _GETORDERREQUEST,
+        "__module__": "petstore.proto.services.order_service_pb2"
+        # @@protoc_insertion_point(class_scope:petstore.services.GetOrderRequest)
+    },
+)
 _sym_db.RegisterMessage(GetOrderRequest)
 
-UpdateOrderRequest = _reflection.GeneratedProtocolMessageType('UpdateOrderRequest', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEORDERREQUEST,
-  '__module__' : 'petstore.proto.services.order_service_pb2'
-  # @@protoc_insertion_point(class_scope:petstore.services.UpdateOrderRequest)
-  })
+UpdateOrderRequest = _reflection.GeneratedProtocolMessageType(
+    "UpdateOrderRequest",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _UPDATEORDERREQUEST,
+        "__module__": "petstore.proto.services.order_service_pb2"
+        # @@protoc_insertion_point(class_scope:petstore.services.UpdateOrderRequest)
+    },
+)
 _sym_db.RegisterMessage(UpdateOrderRequest)
 
 
-
 _ORDERSERVICE = _descriptor.ServiceDescriptor(
-  name='OrderService',
-  full_name='petstore.services.OrderService',
-  file=DESCRIPTOR,
-  index=0,
-  serialized_options=None,
-  serialized_start=220,
-  serialized_end=419,
-  methods=[
-  _descriptor.MethodDescriptor(
-    name='GetOrder',
-    full_name='petstore.services.OrderService.GetOrder',
+    name="OrderService",
+    full_name="petstore.services.OrderService",
+    file=DESCRIPTOR,
     index=0,
-    containing_service=None,
-    input_type=_GETORDERREQUEST,
-    output_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
     serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='CreateOrder',
-    full_name='petstore.services.OrderService.CreateOrder',
-    index=1,
-    containing_service=None,
-    input_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
-    output_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='UpdateOrder',
-    full_name='petstore.services.OrderService.UpdateOrder',
-    index=2,
-    containing_service=None,
-    input_type=_UPDATEORDERREQUEST,
-    output_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
-    serialized_options=None,
-  ),
-])
+    serialized_start=220,
+    serialized_end=419,
+    methods=[
+        _descriptor.MethodDescriptor(
+            name="GetOrder",
+            full_name="petstore.services.OrderService.GetOrder",
+            index=0,
+            containing_service=None,
+            input_type=_GETORDERREQUEST,
+            output_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
+            serialized_options=None,
+        ),
+        _descriptor.MethodDescriptor(
+            name="CreateOrder",
+            full_name="petstore.services.OrderService.CreateOrder",
+            index=1,
+            containing_service=None,
+            input_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
+            output_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
+            serialized_options=None,
+        ),
+        _descriptor.MethodDescriptor(
+            name="UpdateOrder",
+            full_name="petstore.services.OrderService.UpdateOrder",
+            index=2,
+            containing_service=None,
+            input_type=_UPDATEORDERREQUEST,
+            output_type=petstore_dot_proto_dot_petstore__pb2._ORDER,
+            serialized_options=None,
+        ),
+    ],
+)
 _sym_db.RegisterServiceDescriptor(_ORDERSERVICE)
 
-DESCRIPTOR.services_by_name['OrderService'] = _ORDERSERVICE
+DESCRIPTOR.services_by_name["OrderService"] = _ORDERSERVICE
 
 # @@protoc_insertion_point(module_scope)

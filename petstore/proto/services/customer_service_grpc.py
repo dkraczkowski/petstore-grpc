@@ -6,6 +6,7 @@ import typing
 
 import grpclib.const
 import grpclib.client
+
 if typing.TYPE_CHECKING:
     import grpclib.server
 
@@ -14,34 +15,42 @@ import petstore.proto.services.customer_service_pb2
 
 
 class CustomerServiceBase(abc.ABC):
-
     @abc.abstractmethod
-    async def GetCustomer(self, stream: 'grpclib.server.Stream[petstore.proto.services.customer_service_pb2.GetCustomerRequest, petstore.proto.petstore_pb2.Customer]') -> None:
+    async def GetCustomer(
+        self,
+        stream: "grpclib.server.Stream[petstore.proto.services.customer_service_pb2.GetCustomerRequest, petstore.proto.petstore_pb2.Customer]",
+    ) -> None:
         pass
 
     @abc.abstractmethod
-    async def CreateCustomer(self, stream: 'grpclib.server.Stream[petstore.proto.petstore_pb2.Customer, petstore.proto.petstore_pb2.Customer]') -> None:
+    async def CreateCustomer(
+        self,
+        stream: "grpclib.server.Stream[petstore.proto.petstore_pb2.Customer, petstore.proto.petstore_pb2.Customer]",
+    ) -> None:
         pass
 
     @abc.abstractmethod
-    async def UpdateCustomer(self, stream: 'grpclib.server.Stream[petstore.proto.petstore_pb2.Customer, petstore.proto.petstore_pb2.Customer]') -> None:
+    async def UpdateCustomer(
+        self,
+        stream: "grpclib.server.Stream[petstore.proto.petstore_pb2.Customer, petstore.proto.petstore_pb2.Customer]",
+    ) -> None:
         pass
 
     def __mapping__(self) -> typing.Dict[str, grpclib.const.Handler]:
         return {
-            '/petstore.services.CustomerService/GetCustomer': grpclib.const.Handler(
+            "/petstore.services.CustomerService/GetCustomer": grpclib.const.Handler(
                 self.GetCustomer,
                 grpclib.const.Cardinality.UNARY_UNARY,
                 petstore.proto.services.customer_service_pb2.GetCustomerRequest,
                 petstore.proto.petstore_pb2.Customer,
             ),
-            '/petstore.services.CustomerService/CreateCustomer': grpclib.const.Handler(
+            "/petstore.services.CustomerService/CreateCustomer": grpclib.const.Handler(
                 self.CreateCustomer,
                 grpclib.const.Cardinality.UNARY_UNARY,
                 petstore.proto.petstore_pb2.Customer,
                 petstore.proto.petstore_pb2.Customer,
             ),
-            '/petstore.services.CustomerService/UpdateCustomer': grpclib.const.Handler(
+            "/petstore.services.CustomerService/UpdateCustomer": grpclib.const.Handler(
                 self.UpdateCustomer,
                 grpclib.const.Cardinality.UNARY_UNARY,
                 petstore.proto.petstore_pb2.Customer,
@@ -51,23 +60,22 @@ class CustomerServiceBase(abc.ABC):
 
 
 class CustomerServiceStub:
-
     def __init__(self, channel: grpclib.client.Channel) -> None:
         self.GetCustomer = grpclib.client.UnaryUnaryMethod(
             channel,
-            '/petstore.services.CustomerService/GetCustomer',
+            "/petstore.services.CustomerService/GetCustomer",
             petstore.proto.services.customer_service_pb2.GetCustomerRequest,
             petstore.proto.petstore_pb2.Customer,
         )
         self.CreateCustomer = grpclib.client.UnaryUnaryMethod(
             channel,
-            '/petstore.services.CustomerService/CreateCustomer',
+            "/petstore.services.CustomerService/CreateCustomer",
             petstore.proto.petstore_pb2.Customer,
             petstore.proto.petstore_pb2.Customer,
         )
         self.UpdateCustomer = grpclib.client.UnaryUnaryMethod(
             channel,
-            '/petstore.services.CustomerService/UpdateCustomer',
+            "/petstore.services.CustomerService/UpdateCustomer",
             petstore.proto.petstore_pb2.Customer,
             petstore.proto.petstore_pb2.Customer,
         )

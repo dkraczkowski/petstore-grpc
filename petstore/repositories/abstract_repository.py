@@ -1,5 +1,6 @@
-from sqlite3 import Connection, Cursor
 from abc import ABC
+from sqlite3 import Connection
+from sqlite3 import Cursor
 
 
 class AbstractRepository(ABC):
