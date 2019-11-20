@@ -25,7 +25,6 @@ message ListPetRequest {
 service PetService {
   rpc GetPet(GetPetRequest) returns(Pet);
   rpc ListPets(ListPetRequest) returns (PetList);
-
   rpc CreatePet(Pet) returns(Pet);
   rpc DeletePet(Pet) returns(Pet);
 }

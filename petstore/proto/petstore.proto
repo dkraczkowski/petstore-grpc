@@ -1,5 +1,5 @@
 syntax = "proto3";
-// python -m grpc.tools.protoc -I. --proto_path=. --python_out=. --python_grpc_out=. --mypy_out=. petstore/proto/petstore.proto petstore/proto/services/*.proto
+// python -m grpc.tools.protoc --proto_path=. --python_out=. --python_grpc_out=. --mypy_out=. petstore/proto/petstore.proto petstore/proto/services/*.proto
 
 package petstore;
 

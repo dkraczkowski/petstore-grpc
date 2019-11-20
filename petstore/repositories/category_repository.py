@@ -21,3 +21,7 @@ class CategoryRepository(AbstractRepository):
     def create(self, category: Category) -> None:
         cursor = self.execute("INSERT INTO categories('name') VALUES(?)", category.name)
         category.id = cursor.lastrowid
+
+    def remove(self, category: Category) -> None:
+        self.execute("DELETE FROM categories WHERE category_id = ?", category.id)
+        category.id = None

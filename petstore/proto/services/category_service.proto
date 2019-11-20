@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "petstore/proto/petstore.proto";
+
+package petstore.services;
+
+message GetCategoryRequest {
+    uint32 category_id = 1;
+}
+
+service CategoryService {
+  rpc GetCategory(GetCategoryRequest) returns(Category);
+  rpc CreateCategory(Category) returns(Category);
+  rpc DeleteCategory(Category) returns(Category);
+}
