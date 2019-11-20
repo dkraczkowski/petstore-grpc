@@ -9,6 +9,7 @@ authors = ["Krac"]
 python = "^3.6"
 protobuf = "^3.10"
 grpclib = "^0.3.1"
+typing-extensions = "^3.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.3"

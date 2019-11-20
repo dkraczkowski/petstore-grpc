@@ -1,12 +1,8 @@
 from sqlite3 import Cursor
 from typing import Tuple
 
-from petstore.proto.petstore_pb2 import Category
+from petstore.codegen.petstore_pb2 import Category
 from .abstract_repository import AbstractRepository
-
-
-def hydrate_category(cursor: Cursor, row: Tuple[int, str]) -> Category:
-    return Category(id=row[0], name=row[1])
 
 
 class CategoryRepository(AbstractRepository):
@@ -24,4 +20,7 @@ class CategoryRepository(AbstractRepository):
 
     def remove(self, category: Category) -> None:
         self.execute("DELETE FROM categories WHERE category_id = ?", category.id)
-        category.id = None
+
+
+def hydrate_category(cursor: Cursor, row: Tuple[int, str]) -> Category:
+    return Category(id=row[0], name=row[1])

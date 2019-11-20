@@ -1,3 +1,9 @@
 /petstore.egg-info/
 .idea
 __pycache__
+/petstore/proto/*.py
+/petstore/proto/*.pyi
+/petstore/proto/*/*.py
+/petstore/proto/services/*.pyi
+
+.DS_Store
