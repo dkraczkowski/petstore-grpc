@@ -3,7 +3,7 @@
 __pycache__
 /petstore/proto/*.py
 /petstore/proto/*.pyi
-/petstore/proto/*/*.py
+/petstore/proto/**
 .pytest_cache
 .DS_Store
 petstore/petstore.db
