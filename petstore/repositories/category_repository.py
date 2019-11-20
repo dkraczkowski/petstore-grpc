@@ -1,7 +1,7 @@
 from sqlite3 import Cursor
 from typing import Tuple
 
-from petstore.codegen.petstore_pb2 import Category
+from petstore.proto.petstore_pb2 import Category
 from .abstract_repository import AbstractRepository
 
 

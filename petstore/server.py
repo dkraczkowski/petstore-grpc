@@ -19,8 +19,9 @@ async def main():
         create_database(DB_PATH)
 
     db_connection = sqlite3.connect(DB_PATH)
+    category_service = services.CategoryService(repositories.CategoryRepository(db_connection))
 
-    server = Server([services.CategoryService(repositories.CategoryRepository(db_connection))])
+    server = Server([category_service])
     with graceful_exit([server]):
         await server.start(HOST, PORT)
         print(f"Serving on {HOST}:{PORT}")
