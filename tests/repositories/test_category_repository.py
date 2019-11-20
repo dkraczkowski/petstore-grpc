@@ -1,6 +1,6 @@
 from sqlite3 import Row, Connection
 
-from petstore.codegen.petstore_pb2 import Category
+from petstore.proto.petstore_pb2 import Category
 from petstore.repositories import CategoryRepository
 
 
