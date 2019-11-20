@@ -5,5 +5,5 @@ __pycache__
 /petstore/proto/*.pyi
 /petstore/proto/*/*.py
 /petstore/proto/services/*.pyi
-
+.pytest_cache
 .DS_Store

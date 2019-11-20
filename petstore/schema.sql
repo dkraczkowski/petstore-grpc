@@ -19,7 +19,8 @@ CREATE TABLE IF NOT EXISTS customers (
   customer_id integer PRIMARY KEY AUTOINCREMENT NOT NULL,
   first_name char(128) NOT NULL,
   last_name char(128) NOT NULL,
-  email char(128) NOT NULL
+  email char(128) NOT NULL,
+  status integer NOT NULL DEFAULT(0)
 );
 CREATE TABLE IF NOT EXISTS orders (
   order_id integer PRIMARY KEY AUTOINCREMENT NOT NULL,

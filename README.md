@@ -1,4 +1,7 @@
 # Petstore GRPC example
+This is example project in python which utilizes GRPC framework. 
+
+    Note: This project implements only category service for demo purposes.    
 
 ### Prerequisites
 - Python >= 3.6

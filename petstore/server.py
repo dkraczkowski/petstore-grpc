@@ -8,6 +8,7 @@ from grpclib.utils import graceful_exit
 from petstore import repositories
 from petstore import services
 
+
 DB_PATH = path.join(path.dirname(__file__), "petstore.db")
 SCHEMA_PATH = path.join(path.dirname(__file__), "schema.sql")
 HOST = "127.0.0.1"
