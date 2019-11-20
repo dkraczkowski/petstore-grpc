@@ -4,6 +4,7 @@ __pycache__
 /petstore/proto/*.py
 /petstore/proto/*.pyi
 /petstore/proto/*/*.py
-/petstore/proto/services/*.pyi
 .pytest_cache
 .DS_Store
+petstore/petstore.db
+petstore/petstore.db-journal
